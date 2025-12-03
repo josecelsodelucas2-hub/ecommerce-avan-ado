@@ -56,7 +56,7 @@ header nav a:hover { color: #90e0ef; }
 }
 .product button:hover { background: #00b4d8; }
 
-/* Login */
+/* Login e Checkout */
 #login, #checkout {
   max-width: 500px; margin: 3rem auto; background: #fff;
   padding: 2rem; border-radius: 8px;
@@ -77,3 +77,8 @@ button:hover { background: #00b4d8; }
 
 #cart-items { list-style: none; margin-bottom: 1rem; }
 #cart-items li { padding: 0.5rem; border-bottom: 1px solid #ddd; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 1rem; }
+}
