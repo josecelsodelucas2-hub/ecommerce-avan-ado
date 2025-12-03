@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Avançado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Minha Loja</h1>
+    <nav>
+      <a href="login.html">Login</a>
+      <a href="checkout.html">Checkout</a>
+      <div id="cart">Carrinho (0)</div>
+    </nav>
+  </header>
+
+  <section id="products">
+    <div class="product">
+      <img src="img/produto1.jpg" alt="Produto 1">
+      <h3>Produto 1</h3>
+      <p>R$ 50,00</p>
+      <button onclick="addToCart('Produto 1', 50)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="img/produto2.jpg" alt="Produto 2">
+      <h3>Produto 2</h3>
+      <p>R$ 80,00</p>
+      <button onclick="addToCart('Produto 2', 80)">Adicionar ao Carrinho</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
