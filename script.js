@@ -1,8 +1,6 @@
-// Carrinho de compras
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let total = cart.reduce((sum, item) => sum + item.price, 0);
 
-// Adicionar produto ao carrinho
 function addToCart(name, price) {
   cart.push({ name, price });
   localStorage.setItem('cart', JSON.stringify(cart));
@@ -10,7 +8,6 @@ function addToCart(name, price) {
   updateCart();
 }
 
-// Atualizar carrinho
 function updateCart() {
   const cartDiv = document.getElementById('cart');
   if (cartDiv) cartDiv.innerText = `Carrinho (${cart.length})`;
@@ -27,7 +24,6 @@ function updateCart() {
   }
 }
 
-// Login simples
 function login(event) {
   event.preventDefault();
   const email = document.getElementById('email').value;
@@ -41,7 +37,6 @@ function login(event) {
   }
 }
 
-// Cadastro simples
 function register(event) {
   event.preventDefault();
   const name = document.getElementById('name').value;
@@ -51,7 +46,6 @@ function register(event) {
   alert("Cadastro realizado com sucesso!");
 }
 
-// Finalizar compra
 function finalizePurchase(event) {
   event.preventDefault();
   alert("Compra finalizada! Total: R$ " + total.toFixed(2));
@@ -59,7 +53,5 @@ function finalizePurchase(event) {
   window.location.href = "index.html";
 }
 
-// Inicializar carrinho ao carregar
 updateCart();
-
 
